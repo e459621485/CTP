@@ -4,7 +4,7 @@ from .screenShot import ScreenShot
 
 
 def get_shot(device):
-    with ScreenShot("https://www.baidu.com", "./shot/{}.png".format(device.replace('/', '_')), device) as s:
+    with ScreenShot("https://www.moomoo.com", "./shot/{}.png".format(device.replace('/', '_')), device) as s:
         s.capture()
     return device
 
