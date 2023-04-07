@@ -1,5 +1,6 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from .screenShot import ScreenShot
+from asgiref.sync import sync_to_async
 
 
 
@@ -12,6 +13,9 @@ def run():
     devices = ['iPhone X', 'Galaxy S5', 'Pixel 2',
                         'Pixel 2 XL', 'iPhone 5/SE', 'iPhone 6/7/8',
                         'iPhone 6/7/8 Plus', 'Moto G4']
+    # await get_shot(device=devices[0])
+    # loop = asyncio.get_event_loop()
+    # await loop.run_in_executor(None, get_shot, 'iPhone X')
 
     executor = ThreadPoolExecutor(max_workers=4)
 
